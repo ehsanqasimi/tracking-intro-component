@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Barlow", sans-serif;
+}
+
+.container {
+  padding: 30px;
+}
+.container::before {
+  content: "";
+  width: 55%;
+  height: 60%;
+  background-color: hsl(207deg, 33%, 95%);
+  position: absolute;
+  border-bottom-left-radius: 100px;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.container .header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+.container .header nav .close {
+  display: none;
+  height: 100%;
+}
+.container .header nav .burger {
+  height: 100%;
+}
+.container .header nav .logo {
+  height: 100%;
+}
+.container .header nav ul {
+  position: absolute;
+  top: 200%;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 2px 20px 1px hsl(230deg, 11%, 40%);
+  text-transform: uppercase;
+  display: none;
+}
+.container .header nav ul li {
+  list-style: none;
+  padding: 20px;
+  font-weight: 700;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.container .header nav ul li:last-child {
+  color: hsl(231deg, 7%, 65%);
+}
+.container .header nav ul hr {
+  width: 80%;
+  color: hsl(207deg, 33%, 95%);
+}
+.container .hero {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.container .hero .topRight {
+  width: 100%;
+  margin-top: 10%;
+  margin-left: -7%;
+}
+.container .hero .topRight img {
+  width: 160%;
+}
+.container .hero .bottomLeft {
+  padding: 20px;
+  display: grid;
+  gap: 15px;
+}
+.container .hero .bottomLeft .newFeature {
+  position: relative;
+  color: hsl(231deg, 7%, 65%);
+}
+.container .hero .bottomLeft .newFeature span {
+  margin-right: 10px;
+  color: white;
+  background-color: hsl(230deg, 29%, 20%);
+  padding: 3px 8px;
+  border-radius: 50px;
+  height: 100%;
+}
+.container .hero .bottomLeft .heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+}
+.container .hero .bottomLeft .desc {
+  color: hsl(230deg, 11%, 40%);
+}
+.container .hero .bottomLeft .callToActions {
+  padding-block: 20px;
+}
+.container .hero .bottomLeft .callToActions .schedule {
+  background-color: hsl(0deg, 100%, 68%);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  font-weight: 600px;
+  cursor: pointer;
+}
+.container .hero .bottomLeft .callToActions .preview {
+  background-color: white;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: hsl(231deg, 7%, 65%);
+  font-family: "Barlow", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    padding: 50px 150px;
+    position: relative;
+  }
+  .container .header nav {
+    position: static;
+  }
+  .container .header nav .burger {
+    display: none;
+  }
+  .container .header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  .container .header nav ul hr {
+    width: 10px;
+    height: 10px;
+    background-color: hsl(231deg, 7%, 65%);
+    border-radius: 50px;
+    border: none;
+  }
+  .container .header nav ul li {
+    padding-inline: 50px;
+  }
+  .container .header nav ul li:last-child {
+    padding-right: 0;
+  }
+  .container .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+  }
+  .container .hero .topRight {
+    width: 60%;
+    height: 100%;
+    margin: 0;
+  }
+  .container .hero .topRight img {
+    width: 160%;
+  }
+  .container .hero .bottomLeft {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Barlow Condensed", sans-serif;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .container .hero .bottomLeft .desc {
+    font-size: 35px;
+  }
+  .container .hero .bottomLeft .callToActions .schedule {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 20px;
+    margin: 0;
+  }
+  .container .hero .bottomLeft .callToActions .preview {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
